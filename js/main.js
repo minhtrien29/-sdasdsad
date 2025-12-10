@@ -24,3 +24,25 @@ const menuLinks = document.querySelectorAll('.main-menu li a');
             link.classList.add('active');
         }
     });
+    document.getElementById("btnThongTin").addEventListener("click", function () {
+
+    // Lấy dữ liệu từ localStorage
+    let users = JSON.parse(localStorage.getItem("users")) || [];
+
+    if (users.length === 0) {
+        alert("Chưa có người đăng ký nào!");
+        return;
+    }
+
+    // Lấy người đăng ký mới nhất (cuối danh sách)
+    let user = users[users.length - 1];
+
+    let name = user.name || "Không có";
+    let email = user.email || "Không có";
+
+    alert(
+        "Thông Tin Người Đăng Ký:\n\n" +
+        "Họ và tên: " + name + "\n" +
+        "Email: " + email
+    );
+});

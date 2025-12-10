@@ -249,10 +249,10 @@
 }
 
 /* ======================================================== */
-/* CSS CHO MODAL POPUP (STYLE NEON - MỚI) */
+/*  MODAL POPUP (STYLE NEON - MỚI) */
 /* ======================================================== */
 .modal-overlay {
-    display: none; /* Ẩn mặc định */
+    display: none; 
     position: fixed;
     z-index: 10000;
     left: 0;
@@ -266,11 +266,11 @@
 }
 
 .modal-box {
-    background-color: #0F1115; /* Màu nền rất tối */
+    background-color: #0F1115; 
     width: 400px;
     padding: 30px;
     border-radius: 12px;
-    border: 1px solid #00FCCE; /* Viền xanh Neon */
+    border: 1px solid #00FCCE; 
     box-shadow: 0 0 20px rgba(0, 252, 206, 0.25);
     position: relative;
     color: white;
