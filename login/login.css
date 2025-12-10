@@ -1,0 +1,111 @@
+/* ======================================================== */
+/* 1. NỀN TẢNG (BODY) */
+/* ======================================================== */
+body {
+    background-color: #121212; /* Nền cực tối */
+    color: #f0f0f0; /* Chữ sáng mặc định */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Tiêu đề chính */
+#form-login h3 {
+    color: #fb44cd; /* Xanh lá accent */
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+/* ======================================================== */
+/* 2. FORM CONTAINER (#form-login) */
+/* Tăng độ ưu tiên bằng ID selector */
+/* ======================================================== */
+#form-login {
+    width: 100%;
+    max-width: 420px;
+    
+    /* Cấu hình Dark/Sleek */
+    background-color: #1e1e1e; 
+    padding: 35px; 
+    border-radius: 15px; 
+    border: 1px solid #333; 
+    
+    /* Hiệu ứng Glow/Shadow */
+    box-shadow: 
+        0 0 15px rgb(202, 40, 172), /* Ánh sáng xanh lá nhẹ (glow) */
+        0 10px 30px rgba(0, 0, 0, 0.9); /* Độ sâu tối */
+    
+    transition: all 0.3s ease;
+}
+
+#form-login:hover {
+    box-shadow: 
+        0 0 25px rgb(202, 40, 172), 
+        0 15px 40px rgba(0, 0, 0, 1);
+}
+
+/* ======================================================== */
+/* 3. INPUTS & LABELS (Customizing Bootstrap) */
+/* Sử dụng ID + Class để tăng specificity, an toàn hơn */
+/* ======================================================== */
+
+/* Input Controls */
+#form-login .form-control {
+    background-color: #2a2a2a; /* Nền input tối */
+    border: 1px solid #444;
+    color: #f0f0f0; /* Chữ sáng */
+    padding: 12px;
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#form-login .form-control::placeholder {
+    color: #999; 
+}
+
+#form-login .form-control:focus {
+    background-color: #333;
+    border-color: #fb44cd; /* Xanh lá làm focus */
+    box-shadow: 0 0 5px rgb(202, 40, 172);
+    color: #fff;
+}
+
+/* Label (Nhãn) */
+#form-login .form-label {
+    color: #ccc;
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
+
+/* ======================================================== */
+/* 4. BUTTON (Chuyển btn-outline-primary thành SOLID GREEN) */
+/* ======================================================== */
+
+/* Sử dụng ID + Class để ghi đè màu Bootstrap an toàn */
+#form-login .btn-outline-primary {
+    /* Đảm bảo nút có màu FILL GREEN (thay vì outline blue mặc định) */
+    background-color: #fb44cd; 
+    color: #1a1a1a; /* Màu chữ tối cho nền sáng */
+    border-color: #fb44cd; 
+    
+    font-weight: bold;
+    padding: 12px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+#form-login .btn-outline-primary:hover {
+    background-color: #fb44cd;
+    border-color: #fb44cd;
+    color: #1a1a1a;
+    transform: translateY(-1px); 
+}
+
+/* Link Đăng Ký */
+#form-login a {
+    color: #fb44cd;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#form-login a:hover {
+    color: #fb44cd;
+    text-decoration: underline;
+}

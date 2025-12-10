@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thống Kê Doanh Thu</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/thong-ke.css">
+</head>
+<body>
+    <div class="main-header">
+        <div class="logo">
+            <img src="assets/logo.png" alt="logo">
+            <b>BILLIARD MANAGEMENT</b>
+        </div>
+        <div class="account">
+            <a href="login/inf.html">Thông Tin</a>
+            <a href="index.html">Đăng xuất</a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="main-menu">
+            <ul>
+                <li><a href="trang-chu.html">Trang Chủ</a></li>
+                <li><a href="ban-choi.html">Quản Lí bàn chơi</a></li>
+                <li><a href="menu-pham.html">Menu</a></li>
+                <li><a href="thong-ke.html" class="active">Thống kê</a></li>
+                <li><a href="nhan-vien.html">Nhân viên</a></li>
+            </ul>
+        </div>
+        
+        <div class="main-content">
+            <div class="thongke-doanhthu">
+                <h2>THỐNG KÊ DOANH THU</h2>
+                <div class="card-doanhthu">
+                    <div class="card">
+                        <h3>DOANH THU HÔM NAY</h3>
+                        <p class="money" id="doanh-thu-hom-nay">0 VNĐ</p>
+                    </div>
+                    <div class="card">
+                        <h3>DOANH THU TUẦN</h3>
+                        <p class="money" id="doanh-thu-tuan">0 VNĐ</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="thongke-giochoi-card">
+                <h2>TRẠNG THÁI BÀN (LIVE)</h2>
+                <div class="card-banchoi">
+                    <div class="table-selection-area">
+                        <label class="label-style">🎱 Bàn Pool</label>
+                        <select id="select-pool"></select>
+                        <div id="time-pool" class="result-display-card">Chọn bàn...</div>
+                    </div>
+                    <div class="table-selection-area">
+                        <label class="label-style">🔶 Bàn Snooker</label>
+                        <select id="select-snooker"></select>
+                        <div id="time-snooker" class="result-display-card">Chọn bàn...</div>
+                    </div>
+                    <div class="table-selection-area">
+                        <label class="label-style">🔵 Bàn Libre</label>
+                        <select id="select-libre"></select>
+                        <div id="time-libre" class="result-display-card">Chọn bàn...</div>
+                    </div>
+                </div>
+            </div>  
+
+            <div class="thongke-menu">
+                <h2>THỐNG KÊ & CHỈNH SỬA MENU</h2>
+                <div class="menu-card">
+                    <div class="monan">
+                        <h3>ĐỒ ĂN</h3>
+                        <table id="food-table">
+                            <thead><tr><th>STT</th><th>Tên</th><th>SL</th><th>Giá</th><th>TỔNG</th><th>Xóa</th></tr></thead>
+                            <tbody id="food-tbody"></tbody>
+                        </table>
+                        <button id="btn-open-add-food" class="add-row-button"> + Thêm Món Ăn</button>
+                    </div>
+                    
+                    <div class="monuoc">
+                        <h3>NƯỚC UỐNG</h3>
+                        <table id="drink-table">
+                            <thead><tr><th>STT</th><th>Tên</th><th>SL</th><th>Giá</th><th>TỔNG</th><th>Xóa</th></tr></thead>
+                            <tbody id="drink-tbody"></tbody>
+                        </table>
+                        <button id="btn-open-add-drink" class="add-row-button"> + Thêm Đồ Uống</button>
+                    </div>
+                </div>
+                <button id="save-menu-data" class="save-button">Lưu Dữ Liệu Menu</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="modal-add-menu" class="modal-overlay">
+        <div class="modal-box">
+            <span class="close-icon" id="btn-close-modal">&times;</span>
+            
+            <h2 id="modal-title" class="modal-title">THÊM MÓN MỚI</h2>
+
+            <div class="input-group">
+                <label>Tên món:</label>
+                <input type="text" id="inp-menu-name" placeholder="Ví dụ: Cơm rang, Sting...">
+            </div>
+
+            <div class="input-group">
+                <label>Số lượng nhập:</label>
+                <input type="number" id="inp-menu-qty" value="1" placeholder="Số lượng">
+            </div>
+
+            <div class="input-group">
+                <label>Giá bán (VNĐ):</label>
+                <input type="number" id="inp-menu-price" placeholder="Ví dụ: 20000">
+            </div>
+
+            <button id="btn-confirm-add" class="btn-confirm-modal">Xác Nhận Thêm</button>
+        </div>
+    </div>
+
+    <script src="js/thong-ke.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Bàn</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/ban-choi.css">
+</head>
+<body>
+    
+    <div class="main-header">
+        <div class="logo">
+            <img src="assets/logo.png" alt="Logo">
+            <b>BILLIARD MANAGEMENT</b>
+        </div>
+        <div class="account">
+            <a href="thongtin">Thông Tin</a>
+            <a href="index.html">Đăng xuất</a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="main-menu">
+            <ul>
+                <li><a href="trang-chu.html">Trang Chủ</a></li>
+                <li><a href="ban-choi.html" class="active">Quản Lí bàn chơi</a></li>
+                <li><a href="menu-pham.html">Menu</a></li>
+                <li><a href="thong-ke.html">Thống kê</a></li>
+                <li><a href="nhan-vien.html">Nhân viên</a></li>
+            </ul>
+        </div>
+
+         <div class="main-content">
+            <div class="content-wrapper">
+                <div class="main-area">
+                    <div class="tabs">
+                        <a href="#" class="tab active" data-target="table-list">Danh sách bàn</a>
+                        <a href="#" class="tab" data-target="booking-schedule">Lịch đặt bàn</a>
+                    </div>
+                    
+                    <div id="table-list" class="tab-content active">
+                        
+                        <h3 class="table-group-title">BÀN LIBRE</h3>
+                        <div id="libreContainer" class="table-container">
+                            <div class="add-box">+</div>
+                        </div>
+
+                        <h3 class="table-group-title">BÀN POOL</h3>
+                        <div id="Container" class="table-container">
+                            <div class="add-box">+</div>
+                        </div>
+
+                        <h3 class="table-group-title">BÀN SNOOKER</h3>
+                        <div id="snookerContainer" class="table-container">
+                            <div class="add-box">+</div>
+                        </div>
+                        
+                    </div>
+                    
+                    <div id="booking-schedule" class="tab-content">
+                        <div class="booking-list">
+                            </div>
+                    </div>
+                </div>
+                
+                <div id="billContainer" class="bill-box" style="display: none;">
+                    <h3>Hóa đơn Bàn ...</h3>
+
+                    <div class="bill-info">
+                        <p>Loại bàn: <span id="billLoai">...</span></p>
+                        <p>Tiền bàn: <span id="billGia">...</span></p>
+                        <p>Giờ bắt đầu: <span id="billStart">...</span></p>
+                        <p>Giờ kết thúc: <span id="billEnd">...</span></p>
+                        <div style="border-top: 1px dashed #555; margin-top: 5px; padding-top: 5px;">
+                            Tổng giờ chơi: <span id="billTotalTime" style="color: #00e0ff; font-size: 1.1em;">...</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bill-services">
+                        <p>Dịch vụ / Món ăn:</p>
+                        <div id="billListItems">
+                            (Chưa gọi món)
+                        </div>
+                        <p>
+                            Tiền món: <span id="billServiceTotal">0</span> VNĐ
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 20px; text-align: right;">
+                        <span style="font-size: 1em;">TỔNG THANH TOÁN</span><br>
+                        <span id="billTotal" style="font-size: 1.8em; font-weight: bold; color: #ffffff;">0 VNĐ</span>
+                    </div>
+
+                    <button id="btn-payment-confirm" class="btn btn-mo" style="width: 100%; margin-top: 15px; background-color: #28a745; font-weight: bold;">XÁC NHẬN THANH TOÁN</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="bookingModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Tạo Lịch Đặt Bàn Mới</h3>
+            
+            <div class="form-group">
+                <label for="modal-name">Tên Khách Hàng:</label>
+                <input type="text" id="modal-name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="modal-phone">Số Điện Thoại:</label>
+                <input type="text" id="modal-phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="modal-time">Giờ Đặt:</label>
+                <input type="time" id="modal-time" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="modal-table-type">Loại Bàn:</label>
+                <select id="modal-table-type" required>
+                    <option value="Libre">Libre</option>
+                    <option value="Pool">Pool</option>
+                    <option value="Snooker">Snooker</option> 
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="modal-table-id">Chọn Bàn (Cụ thể):</label>
+                <select id="modal-table-id">
+                    <option value="">-- Chọn bàn bất kỳ --</option>
+                    </select>
+            </div>
+
+            <div class="form-group">
+                <label for="modal-note">Ghi chú: </label>
+                <textarea id="modal-note" rows="3"></textarea>
+            </div>
+            
+            <button id="saveBookingBtn" class="btn btn-mo">Lưu Lịch Đặt</button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/ban-choi.js"></script>
+</body>
+</html>

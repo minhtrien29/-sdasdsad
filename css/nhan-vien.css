@@ -1,0 +1,411 @@
+.capnhat-nhanvien {
+    display: flex;
+    margin-bottom: 30px;
+}
+.left {
+    width: 20%;
+    padding: 20px;
+    color: #ffff;
+    border-right: 3px solid black;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.6);
+    border-style: solid; /* Phải có kiểu thì viền mới hiển thị */
+    border-width: 1px;
+    border-color: #00ffd0; /* Đặt màu viền */
+    border-radius: 15px;
+}
+
+.left h2 {
+    color: #00ffd0;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 12px 20px;
+    border-radius: 5px; 
+    border: 1px solid #444;
+    background: #444; 
+    color: var(--color-text-light);
+    font-size: 16px;
+}
+
+input[type="text"]::placeholder {
+    color: #bdc3c7;
+}
+
+.nv-option{
+    margin-top: 15px;
+    padding: 12px 20px;
+    border: 2px solid #444;
+    border-radius: 4px;
+}
+.left h3 {
+    background: #444; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #ffff; 
+    border-left: 5px solid black; 
+}
+
+.left h3:hover {
+    border: 2px solid #fff;
+    color: #00ffd0;
+    cursor: pointer;
+}
+
+.left ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 5px;
+}
+.left li {
+    color: #ffff;
+    padding: 8px 15px;
+    border-radius: 3px;
+    margin: 6px 0;
+    font-weight: 500;
+    box-shadow: none;
+}
+
+.left li:hover {
+    background: #444; 
+    color: white;
+    transform: none;
+    box-shadow: 0 1px 5px rgba(52, 152, 219, 0.5);
+}
+
+
+.left button {
+    width: 115px;
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px; 
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    
+}
+
+
+.left button:first-of-type {
+    background: transparent;
+    border: 1px solid #0d5e12;
+    color: #0d5e12;
+    padding: 10px;
+    width: 48%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.left button:first-of-type:hover {
+    cursor: pointer;
+    background: #27ae60;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--primary-color);
+    
+}
+
+
+#xoaNV, .left button:last-child {
+    background: transparent;
+    border: 1px solid #901515;
+    color: #901515;
+    padding: 10px;
+    width: 48%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+#xoaNV:hover, .left button:last-child:hover {
+    cursor: pointer;
+    background: #9b3131;
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px var(--primary-color);
+    
+}
+
+
+.right{
+    width: 80%;
+    padding: 20px;
+    border-style: solid; /* Phải có kiểu thì viền mới hiển thị */
+    border-width: 1px;
+    border-color: #00ffd0; /* Đặt màu viền */
+    border-radius: 15px;
+}
+.right h2{
+    text-align: center;
+    color: #00ffd0;
+}
+
+.title {
+    text-align: center;
+    font-size: 26px;
+    background: #444;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    color: #ffff; 
+}
+
+.lich { 
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+}
+
+.right table {
+    width: 100%;
+    min-width: 700px;
+}
+
+.right th {
+    background: #1B1B1B; 
+    color:#fff;
+    padding: 12px 8px;
+    border: 1px solid #fff;
+    font-size: 15px;
+}
+
+.right th:first-child, .right th:last-child {
+    border-radius: 0;
+}
+
+.right td {
+    width: 100px;
+    color: #ffff; 
+    text-align: center;
+    border: 1px solid #fff; 
+    padding: 12px 8px;
+    background: #444; 
+}
+
+.right td:hover {
+    background: #4a637d; 
+}
+
+
+td.checked {
+    color: green; 
+    font-weight: bold;
+    font-size: 24px;
+    background: #4a637d; 
+}
+
+td:first-child { 
+    font-weight: bold; 
+    color: #ffff;
+    background: #444; 
+}
+
+.right button {
+    width: 200px;
+    margin: 15px 10px;
+    padding: 14px;
+    border-radius: 5px;
+    color: #ffff;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+
+.right button:first-of-type {
+    background: #121212; 
+}
+.right button:first-of-type:hover {
+    background: black;
+    color: #00ffd0;
+    cursor: pointer;
+    border: 2px solid #00ffd0;
+    transform: translateY(-4px);
+}
+
+
+.right button:last-child {
+    background: #121212;
+}
+.right button:last-child:hover {
+    background: black;
+    color: #00ffd0;
+    cursor: pointer;
+    border: 2px solid #00ffd0;
+    transform: translateY(-4px);
+}
+
+
+@media (max-width: 992px) { 
+    .container {
+        flex-direction: column; 
+    }
+    .left {
+        flex: 1;
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 3px solid #ffff;
+    }
+}   
+
+
+.right td input[type="checkbox"] {
+    
+    width: 20px;
+    height: 20px;
+    
+    
+    margin: 0; 
+    vertical-align: middle;
+
+    border: 2px solid #fff;
+    cursor: pointer;
+    
+    accent-color: green;
+}
+
+
+td.checked {
+
+    color: inherit;
+    font-size: 14px;
+    font-weight: normal;
+    background: #444;
+}
+/* Danh sách nhân viên CSS */
+.danhsach {
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #00ffd0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.danhsach h2 {
+    text-align: center;
+    color: #00ffd0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ffff;
+    padding-bottom: 10px;
+}
+
+.danhsach table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.danhsach tbody tr:hover {
+    background-color: #8a948d;
+}
+
+.danhsach tbody td {
+    padding: 10px;
+    border: 1px solid #eee;
+    color: #fff;
+    font-size: 0.9em;
+}
+
+/* Căn giữa cột STT */
+.danhsach tbody td:first-child {
+    text-align: center;
+    width: 10%;
+}
+
+/* --- CSS CHO MODAL THÊM NHÂN VIÊN --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Nền đen mờ đậm hơn chút */
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-box {
+    background: #0f0f0f; /* Màu nền đen như trong ảnh */
+    border: 1px solid #00d2d3; /* Viền xanh cyan */
+    padding: 30px;
+    width: 500px; /* Rộng 500px để "đều nhau" với bảng Menu */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 210, 211, 0.3); /* Hiệu ứng phát sáng nhẹ */
+    position: relative;
+    color: white;
+}
+
+.modal-box h2 {
+    text-align: center;
+    color: #00d2d3; /* Màu chữ tiêu đề xanh */
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #ccc;
+    line-height: 20px;
+}
+.close-btn:hover { color: #fff; }
+
+.input-group { margin-bottom: 20px; }
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #e0e0e0;
+    font-size: 16px;
+}
+
+.input-group input, 
+.input-group select {
+    width: 100%;
+    padding: 12px 1px;
+    background: #222;
+    border: 1px solid #555;
+    color: white;
+    border-radius: 5px;
+    outline: none;
+    font-size: 15px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #00d2d3;
+}
+
+/* NÚT XÁC NHẬN THÊM - CHỈNH CHO GIỐNG ẢNH */
+.btn-xacnhan {
+    width: 100%;
+    padding: 15px;
+    background: #00d2d3; /* Màu nền xanh ngọc */
+    color: #000;          /* Chữ màu đen */
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.btn-xacnhan:hover {
+    background: #01a3a4;
+    box-shadow: 0 0 15px rgba(0, 210, 211, 0.6);
+}

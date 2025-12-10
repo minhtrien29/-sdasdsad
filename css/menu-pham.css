@@ -1,0 +1,318 @@
+:root {
+    --primary-color: #00d2b4;
+    --text-gray: #bbb;
+    --border-glow: 0 0 15px rgba(0, 210, 180, 0.4);
+}
+
+/* --- HEADER --- */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.header h1 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 210, 180, 0.3);
+}
+
+.btn-add {
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-add:hover {
+    box-shadow: 0 0 15px var(--primary-color);
+    transform: translateY(-2px);
+}
+
+/* --- TABS --- */
+.tabs {
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 1px solid #333;
+    color: var(--text-gray);
+    padding: 10px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 5px;
+    transition: 0.3s;
+    border-radius: 4px;
+}
+
+.tab-btn:hover {
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+    color: #000;
+    border-color: var(--primary-color);
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(0, 210, 180, 0.4);
+}
+
+/* --- GRID MENU --- */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #161616;
+    border: 1px solid #333;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+    box-shadow: var(--border-glow);
+}
+
+.card-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    background-color: #222;
+}
+
+.card-body {
+    padding: 15px;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.card-price {
+    color: var(--primary-color);
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.btn-order {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 8px;
+    width: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-order:hover {
+    background: var(--primary-color);
+    color: #000;
+    box-shadow: 0 0 10px rgba(0, 210, 180, 0.5);
+}
+
+/* --- MODAL (POPUP) --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Nền tối hơn */
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(3px);
+}
+
+.modal-content {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    width: 90%;
+    max-width: 400px;
+    color: white;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 210, 180, 0.2);
+}
+
+.modal-header {
+    margin-bottom: 25px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.form-group input {
+    width: 94%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #252525;
+    color: white;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+.form-group select{
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #252525;
+    color: white;
+    outline: none;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    background: #303030;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.btn-submit:hover {
+    opacity: 0.9;
+    transform: scale(1.02);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: #777;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close:hover { color: var(--primary-color); }
+
+/* --- NOTIFICATION TOAST (CENTER) --- */
+#toast {
+    visibility: hidden; /* Mặc định ẩn */
+    opacity: 0;
+    
+    position: fixed;
+    z-index: 200; /* Cao hơn modal */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Căn giữa hoàn toàn */
+    
+    background-color: rgba(0, 210, 180, 0.95);
+    color: #000;
+    text-align: center;
+    border-radius: 8px;
+    padding: 20px 40px;
+    min-width: 300px;
+    
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 0 50px rgba(0, 210, 180, 0.6);
+    border: 2px solid #fff;
+    
+    transition: opacity 0.3s ease-in-out, visibility 0.3s;
+}
+
+#toast.show {
+    visibility: visible;
+    opacity: 1;
+    animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+    0% { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+    80% { transform: translate(-50%, -50%) scale(1.1); opacity: 1; }
+    100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+.empty-msg {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 50px;
+    color: #555;
+    font-style: italic;
+    border: 2px dashed #333;
+    border-radius: 10px;
+}
+
+.btn-delete {
+    background: transparent;
+    border: 1px solid #d20042;
+    color: #d20042;
+    padding: 8px;
+    width: 50%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.btn-delete:hover {
+    box-shadow: 0 0 15px var(--primary-color);
+    transform: translateY(-2px);
+}

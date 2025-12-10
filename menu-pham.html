@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Bàn</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu-pham.css">
+
+    </head>
+<body>
+
+    <div class="main-header">
+        <div class="logo">
+            <img src="assets/logo.png" alt="lỗi">
+            <b>BILLIARD MANAGEMENT</b>
+        </div>
+        <div class="account">
+            <a href="thongtin">Thông Tin</a>
+            <a href="index.html">Đăng xuất</a>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main-menu">
+            <ul>
+                <li><a href="trang-chu.html">Trang Chủ</a></li>
+                <li><a href="ban-choi.html">Quản Lí bàn chơi</a></li>
+                <li><a href="menu-pham.html">Menu</a></li>
+                <li><a href="thong-ke.html">Thống kê</a></li>
+                <li><a href="nhan-vien.html">Nhân viên</a></li>
+            </ul>
+        </div>
+
+         <div class="main-content" >
+            <div class="container">
+        <div class="header">
+            <h1>DANH SÁCH MÓN ĂN & ĐỒ UỐNG</h1>
+            <button class="btn-add" onclick="openAddModal()">+ Thêm Món</button>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab('food')">Món Ăn</button>
+            <button class="tab-btn" onclick="switchTab('drink')">Đồ Uống</button>
+        </div>
+
+        <div class="menu-grid" id="menuContainer">
+            <div class="empty-msg">Chưa có món nào. Hãy ấn "Thêm Món"!</div>
+        </div>
+    </div>
+
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('addModal')">&times;</span>
+            <div class="modal-header">Thêm Món Mới</div>
+            
+            <div class="form-group">
+                <label>Tên món:</label>
+                <input type="text" id="inputName" placeholder="Ví dụ: Phở Cuốn">
+            </div>
+            <div class="form-group">
+                <label>Giá (VNĐ):</label>
+                <input type="number" id="inputPrice" placeholder="Ví dụ: 50000">
+            </div>
+            <div class="form-group">
+                <label>URL Hình ảnh:</label>
+                <input type="text" id="inputImage" placeholder="Link ảnh (https://...)">
+            </div>
+            <div class="form-group">
+                <label>Loại:</label>
+                <select id="inputCategory">
+                    <option value="food">Món Ăn</option>
+                    <option value="drink">Đồ Uống</option>
+                </select>
+            </div>
+            <button class="btn-submit" onclick="addItem()">Xác Nhận Thêm</button>
+        </div>
+    </div>
+
+<div id="orderModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal('orderModal')">&times;</span>
+        <div class="modal-header">Xác Nhận Order</div>
+        <p id="orderItemName" style="text-align: center; margin-bottom: 15px; color: #ccc; font-style: italic;"></p>
+        
+        <div class="form-group">
+            <label>Loại bàn:</label>
+            <select id="orderTableType">
+                <option value="LIBRE">Bàn Libre</option>
+                <option value="SNOOKER">Bàn Snooker</option>
+                <option value="POOL">Bàn Pool</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Số bàn:</label>
+            <input type="number" id="orderTable" placeholder="Nhập số bàn (VD: 1)">
+        </div>
+        <div class="form-group">
+            <label>Số lượng:</label>
+            <input type="number" id="orderQuantity" value="1" min="1">
+        </div>
+        <button class="btn-submit" onclick="confirmOrder()">Xác Nhận Order</button>
+    </div>
+</div>
+
+    <div id="toast">
+        <div id="toast-message">Nội dung thông báo</div>
+    </div>
+
+    
+        </div>
+    </div>
+
+<script src="js/menu-pham.js"></script>
+</body>
+<script src="js/main.js"></script>
+</html>

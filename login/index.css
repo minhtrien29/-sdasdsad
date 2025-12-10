@@ -1,0 +1,519 @@
+/* --- 1. CÀI ĐẶT CHUNG & BIẾN (QUAN TRỌNG) --- */
+:root {
+    --primary-color: #ff00cc; /* Màu chủ đạo (Hồng Neon) */
+    --bg-color: #000;         /* Màu nền chính */
+    --text-color: #fff;       /* Màu chữ chính */
+    --text-gray: #e0e0e0;     /* Màu chữ phụ */
+    --dark-overlay: rgba(0, 0, 0, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Class dùng chung */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.highlight { color: var(--primary-color); }
+.highlight-text { color: var(--primary-color); }
+
+/* --- 2. NAVBAR --- */
+.navbar {
+    background-color: #050505;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.navbar .container {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 40px;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Buttons */
+.btn {
+    text-decoration: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-secondary {
+    background-color: #1f1f1f;
+    color: var(--primary-color);
+    border: 1px solid #333;
+    margin-left: 10px;
+}
+
+.btn-secondary:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.btn-gradient {
+    background: linear-gradient(90deg, var(--primary-color) 0%, #3333ff 100%);
+    color: white;
+    padding: 12px 35px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255, 0, 204, 0.4);
+}
+
+.btn-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 25px rgba(51, 51, 255, 0.6);
+}
+
+/* --- 3. HERO SECTION --- */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(20,0,50,0.6) 50%, rgba(0,0,0,0.4) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin-left: 10%;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    text-shadow: 0 0 20px rgba(255, 0, 204, 0.5);
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* --- 4. FEATURES (TÍNH NĂNG) --- */
+.features {
+    padding: 80px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.section-header p {
+    color: #ccc;
+    font-size: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    color: #000;
+    padding: 50px 30px;
+    border-radius: 20px;
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.card:hover { transform: translateY(-10px); }
+
+.card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 25px;
+    height: 90px;
+    overflow: hidden;
+}
+
+.card a {
+    text-decoration: underline;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.card a:hover {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* --- 5. STATS (THỐNG KÊ) --- */
+.stats { padding: 80px 0; text-align: center; }
+
+.stats-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.stat-item h2 {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    line-height: 1;
+}
+
+.stat-item p {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+/* --- 6. PRICING (BẢNG GIÁ) --- */
+.pricing {
+    position: relative;
+    padding: 80px 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.overlay-dark {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: var(--dark-overlay);
+    z-index: 1;
+}
+
+.relative-content { position: relative; z-index: 2; }
+
+.pricing-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 50px;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.price-card {
+    background: #fff;
+    color: #000;
+    padding: 30px 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.price-card:hover { transform: translateY(-5px); }
+
+.price-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.price-card h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.price-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 20px;
+    min-height: 40px;
+}
+
+.price-card .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* --- 7. GALLERY (THƯ VIỆN ẢNH) --- */
+.gallery { padding: 60px 0; }
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 15px;
+    height: 250px;
+    border: 1px solid #333;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+/* --- 8. TESTIMONIALS (KHÁCH HÀNG) --- */
+.testimonials {
+    padding: 100px 0;
+    border-top: 1px solid #222;
+}
+
+.testimonials-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.testi-header {
+    padding-top: 120px; /* Có thể giảm xuống 80px nếu thấy quá xa */
+}
+
+.testi-header h2 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.testi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.testi-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(255, 0, 204, 0.1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.testi-card i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.testi-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: justify;
+    text-align-last: left;
+}
+
+.testi-card h4 {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+    text-align: right; /* Căn phải theo ý bạn ở code cuối */
+    margin-top: auto;
+}
+
+.testi-card h4 span {
+    font-size: 0.85rem;
+    color: #666;
+    font-weight: normal;
+}
+
+/* --- 9. FOOTER --- */
+.footer-section {
+    padding-top: 60px;
+    border-top: 2px solid var(--primary-color);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 900;
+    text-transform: uppercase; 
+    margin-bottom: 20px;
+}
+.footer-logo img {
+    height: 40px;        /* Giới hạn chiều cao cố định */
+    width: auto;         /* Chiều rộng tự động co theo */
+    max-width: 100%;     /* Đảm bảo không bao giờ tràn ra ngoài */
+    object-fit: contain; /* Giữ ảnh không bị méo */
+    margin-right: 10px;  /* Cách chữ bên cạnh một chút */
+    vertical-align: middle; /* Căn giữa với dòng chữ */
+}
+
+.footer-desc, .footer-contact li, .footer-links li, .footer-links a {
+    color: var(--text-gray);
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.footer-links a:hover { color: var(--primary-color); }
+.footer-col h3 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.footer-contact li, .footer-links li { list-style: disc inside; }
+.footer-links a { text-decoration: none; transition: color 0.3s; }
+
+.footer-bottom {
+    background-color: #000;
+    border-top: 1px solid #333;
+    padding: 20px 0;
+}
+
+.bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.policy-links a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 5px;
+}
+.policy-links a:hover { color: #fff; }
+
+/* --- 10. RESPONSIVE (Tất cả thiết bị Mobile gom vào đây) --- */
+@media (max-width: 1024px) {
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px) {
+    .testimonials-layout {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .testi-header h2 { margin-bottom: 40px; }
+    .testi-header h2 br { display: none; }
+    .testi-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+    .footer-grid { grid-template-columns: 1fr; }
+    .bottom-content {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.2rem; }
+    .nav-content { flex-direction: column; gap: 15px; }
+    .hero-section { height: auto; padding: 60px 0; }
+    .logo { flex-direction: column; gap: 5px; font-size: 1rem; }
+    .section-header h2 { font-size: 1.8rem; }
+    .card { padding: 30px 20px; }
+    .card p { height: auto; }
+    .stats-grid { flex-direction: column; }
+    .stat-item h2 { font-size: 3rem; }
+}
+
+@media (max-width: 600px) {
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item { height: 220px; }
+}

@@ -1,0 +1,93 @@
+/* Đảm bảo toàn bộ trang có nền tối và chữ sáng */
+body {
+    background-color: #121212; /* Nền cực tối */
+    color: #f0f0f0; /* Chữ sáng mặc định */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Tiêu đề chính */
+#form-register h3 { /* Giả sử form Đăng Ký có ID là #form-register */
+    color: #fb44cd; /* Xanh lá accent */
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+#form-register {
+    width: 100%;
+    max-width: 420px;
+    
+    /* Cấu hình Dark/Sleek */
+    background-color: #1e1e1e; 
+    padding: 35px; 
+    border-radius: 15px; 
+    border: 1px solid #333; 
+    
+    /* Hiệu ứng Glow/Shadow */
+    box-shadow: 
+        0 0 15px rgb(202, 40, 172), /* Ánh sáng xanh lá nhẹ (glow) */
+        0 10px 30px rgba(0, 0, 0, 0.9); /* Độ sâu tối */
+    
+    transition: all 0.3s ease;
+}
+
+#form-register:hover {
+    box-shadow: 
+        0 0 25px rgb(202, 40, 172), 
+        0 15px 40px rgba(0, 0, 0, 1);
+}
+/* Input Controls */
+#form-register .form-control {
+    background-color: #2a2a2a; /* Nền input tối */
+    border: 1px solid #444;
+    color: #f0f0f0; /* Chữ sáng */
+    padding: 12px;
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+#form-register .form-control::placeholder {
+    color: #999; 
+}
+
+#form-register .form-control:focus {
+    background-color: #333;
+    border-color: #fb44cd; /* Xanh lá làm focus */
+    box-shadow: 0 0 5px rgb(202, 40, 172);
+    color: #fff;
+}
+
+/* Label (Nhãn) */
+#form-register .form-label {
+    color: #ccc;
+    font-size: 0.95em;
+    margin-bottom: 5px;
+}
+
+/* Customizing Bootstrap Button (Đăng Ký) */
+/* LƯU Ý: Nếu nút Đăng Ký cũng dùng lớp .btn-outline-primary */
+#form-register .btn-outline-primary {
+    background-color: #fb44cd; 
+    color: #1a1a1a; 
+    border-color: #fb44cd; 
+    
+    font-weight: bold;
+    padding: 12px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+#form-register .btn-outline-primary:hover {
+    background-color: #fb44cd;
+    border-color: #fb44cd;
+    color: #1a1a1a;
+    transform: translateY(-1px); 
+}
+
+/* Link Đăng Nhập (Nếu có) */
+#form-register a {
+    color: #fb44cd;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+#form-register a:hover {
+    color: #fb44cd;
+    text-decoration: underline;
+}

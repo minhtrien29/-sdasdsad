@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Bàn</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/nhan-vien.css">
+    </head>
+<body>
+    
+    <div class="main-header">
+        <div class="logo">
+            <img src="assets/logo.png" alt="lỗi">
+            <b>BILLIARD MANAGEMENT</b>
+        </div>
+        <div class="account">
+            <a href="login/inf.html">Thông Tin</a>
+            <a href="login/index.html">Đăng xuất</a>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="main-menu">
+            <ul>
+                <li><a href="trang-chu.html">Trang Chủ</a></li>
+                <li><a href="ban-choi.html">Quản Lí bàn chơi</a></li>
+                <li><a href="menu-pham.html">Menu</a></li>
+                <li><a href="thong-ke.html">Thống kê</a></li>
+                <li><a href="nhan-vien.html">Nhân viên</a></li>
+            </ul>
+        </div>
+
+         <div class="main-content" >
+            <div class="capnhat-nhanvien">
+              <div class="left">
+                  <h2>NHÂN VIÊN VÀ CA LÀM</h2>
+                  <input type="text" id="search" placeholder=" Tìm nhân viên...">
+                  <div class="nv-option">
+                      <div>
+                        <h3 onclick="hienThi('ql')">Quản Lý ▼</h3>
+                        <ul id="ql" style="display:none;"></ul>
+                      </div>
+
+                      <div>
+                        <h3 onclick="hienThi('pv')">Phục Vụ ▼</h3>
+                        <ul id="pv" style="display:none;"></ul>
+                      </div>
+
+                      <div>
+                        <h3 onclick="hienThi('tn')">Thu Ngân ▼</h3>
+                        <ul id="tn" style="display:none;"></ul>
+                      </div>
+                  </div>
+                  <div class="nv-button">
+                      <button onclick="themNhanVien()"> Thêm</button>
+                      <button id="xoaNV" onclick="xoaNhanVien()"> Xóa</button>
+                  </div>
+                  
+                </div>
+
+                <div class="right">
+                  <h2 class="title" id="tenNV">Chưa chọn nhân viên</h2>
+                  <div class="lich">
+                    <table>
+                      <tr><th colspan="8" id="ngay"></th></tr>
+                      <tr>
+                        <th>Ca Làm</th>
+                        <th>Thứ 2</th><th>Thứ 3</th><th>Thứ 4</th>
+                        <th>Thứ 5</th><th>Thứ 6</th><th>Thứ 7</th><th>CN</th>
+                      </tr>
+                      <tr id="rowSang">
+                        <td>Sáng</td>
+                        <td id="sang2"></td><td id="sang3"></td><td id="sang4"></td>
+                        <td id="sang5"></td><td id="sang6"></td><td id="sang7"></td><td id="sangCN"></td>
+                      </tr>
+                      <tr id="rowChieu">
+                        <td>Chiều</td>
+                        <td id="chieu2"></td><td id="chieu3"></td><td id="chieu4"></td>
+                        <td id="chieu5"></td><td id="chieu6"></td><td id="chieu7"></td><td id="chieuCN"></td>
+                      </tr>
+                      <tr id="rowToi">
+                        <td>Tối</td>
+                        <td id="toi2"></td><td id="toi3"></td><td id="toi4"></td>
+                        <td id="toi5"></td><td id="toi6"></td><td id="toi7"></td><td id="toiCN"></td>
+                      </tr>
+                    </table>
+                  </div>
+                    <div style="text-align:center;">
+                      <button onclick="capNhat()">💾 Cập nhật</button>
+                      <button onclick="resetLuaChon()">🔁 Chọn lại</button>
+                    </div>
+              </div>
+                </div>
+
+            <div class="danhsach">
+                <h2>Danh Sách Nhân Viên</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Tên Nhân Viên</th>
+                            <th>Chức Vụ</th>
+                            <th>Số Điện Thoại</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        </tbody>
+                </table>
+            </div>
+
+        </div>
+
+        </div>
+
+    <div id="modalThemNV" class="modal-overlay">
+        <div class="modal-box">
+            <span class="close-btn" onclick="dongModal()">×</span>
+            <h2>THÊM NHÂN VIÊN MỚI</h2>
+            
+            <div class="input-group">
+                <label>Chức vụ:</label>
+                <select id="inpChucVu">
+                    <option value="ql">Quản Lý</option>
+                    <option value="pv">Phục Vụ</option>
+                    <option value="tn">Thu Ngân</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>Tên nhân viên:</label>
+                <input type="text" id="inpTen" placeholder="">
+            </div>
+
+            <div class="input-group">
+                <label>Số điện thoại:</label>
+                <input type="text" id="inpSDT" placeholder="">
+            </div>
+
+            <button class="btn-xacnhan" onclick="xuLyThem()">Xác Nhận Thêm</button>
+        </div>
+    </div>
+    <script src="js/nhan-vien.js"></script>
+</body>
+<script src="js/main.js"></script>
+</html>

@@ -1,0 +1,303 @@
+/* ============================
+   TỔNG QUAN
+============================ */
+.tong-quan {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.tong-quan > div {
+    background: #111;
+    border: 1px solid #2a2a2a;
+    padding: 22px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 12px #00d2b4;
+    transition: 0.25s;
+}
+
+.tong-quan > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px #fb44cd;
+}
+
+.tong-quan h3 {
+    font-size: 18px;
+    color: #00d2b4;
+    margin-bottom: 10px;
+}
+
+.tq-so {
+    font-size: 32px;
+    font-weight: 700;
+    color: #00d2b4;
+}
+
+/* ============================
+   TOP SẢN PHẨM
+============================ */
+.top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.top > div {
+    background: #111;
+    padding: 22px;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+    transition: 0.25s;
+}
+
+.top > div:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(255, 255, 255, 0.15);
+}
+
+.top h2 {
+    text-align: center;
+    color: #00d2b4;
+    margin-bottom: 15px;
+    font-size: 19px;
+}
+
+/* ============================
+   TABLE STYLE
+============================ */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #1a1a1a;
+    padding: 12px;
+    color: #00d2b4;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 13px;
+    border-bottom: 1px solid #333;
+}
+
+td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #222;
+    transition: 0.2s;
+}
+
+tr:hover td {
+    background: rgba(255, 255, 255, 0.04);
+}
+
+td[contenteditable="true"] {
+    background: rgba(56, 189, 248, 0.22);
+    border: 1px solid #38bdf8;
+    border-radius: 4px;
+}
+
+/* ============================
+   KHO HÀNG
+============================ */
+.kho {
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    margin-top: 20px;
+    border: 1px solid #2a2a2a;
+}
+
+.kho-block {
+    background: rgba(255, 255, 255, 0.04);
+    padding: 18px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    transition: 0.25s;
+}
+
+.kho-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.kho h2 {
+    color: #00d2b4;
+    font-size: 20px;
+    margin: 0;
+}
+
+.kho-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* BUTTONS */
+.btn-add {
+    padding: 8px 14px;
+    background: #00d2b4;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.25s;
+    font-weight: bold;
+}
+.btn-add:hover { 
+    box-shadow: 0 0 15px var(--primary-color);
+    transform: translateY(-2px); 
+}
+
+.btn-delete {
+    padding: 5px 10px;
+    background: #ef4444;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+    font-weight: bold;
+}
+.btn-delete:hover { 
+    box-shadow: 0 0 15px #750d0d;
+    transform: translateY(-2px);
+ }
+
+.btn-update {
+    padding: 8px 14px;
+    background: #3b82f6;
+    border: none;
+    border-radius: 6px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    transition: 0.25s;
+    font-weight: bold;
+}
+.btn-update:hover { 
+    box-shadow: 0 0 15px #00226a;
+    transform: translateY(-2px); 
+}
+.btn-update.save { background: #10b981 !important; }
+
+/* ============================
+   MODAL STYLE (GIAO DIỆN NEON MỚI)
+============================ */
+.modal-kho {
+    display: none; /* Mặc định ẩn */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); /* Nền tối mờ đậm */
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+}
+
+.modal-kho-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 420px;
+    background: #0f0f0f;
+    border: 1px solid #00ddae; /* Viền xanh Neon */
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(0, 221, 174, 0.2);
+    font-family: sans-serif;
+    color: #fff;
+}
+
+.modal-title {
+    text-align: center;
+    color: #00ddae;
+    font-size: 22px;
+    margin-bottom: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.close-kho {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: #666;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+}
+.close-kho:hover { color: #fff; }
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #aaa;
+}
+
+.custom-input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+.custom-input:focus {
+    border-color: #00ddae;
+    box-shadow: 0 0 10px rgba(0, 221, 174, 0.15);
+}
+
+.btn-save-modal {
+    width: 100%;
+    padding: 14px;
+    background-color: #00ddae;
+    color: #000;
+    font-weight: 800;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+
+.btn-save-modal:hover {
+    background-color: #00ffc8;
+    box-shadow: 0 0 20px rgba(0, 221, 174, 0.4);
+    transform: translateY(-2px);
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 768px) {
+    .tong-quan { grid-template-columns: 1fr; gap: 20px; }
+    .top { display: block; }
+    .top-block, .kho-block { width: 100%; overflow-x: auto; margin-bottom: 20px; }
+    table { min-width: 500px; } /* Để bảng không bị co quá nhỏ trên mobile */
+    .kho-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .modal-kho-content { width: 90%; }
+}
