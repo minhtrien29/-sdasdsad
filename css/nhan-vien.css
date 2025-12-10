@@ -468,7 +468,9 @@ td.checked {
         font-size: 15px;
         padding: 10px 15px;
     }
-
+    .modal-box{
+        width: 80%;
+    }
     .nv-option {
         font-size: 14px;
         padding: 10px 15px;
