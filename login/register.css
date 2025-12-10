@@ -1,12 +1,12 @@
-/* Đảm bảo toàn bộ trang có nền tối và chữ sáng */
+
 body {
-    background-color: #121212; /* Nền cực tối */
-    color: #f0f0f0; /* Chữ sáng mặc định */
+    background-color: #121212; 
+    color: #f0f0f0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 /* Tiêu đề chính */
-#form-register h3 { /* Giả sử form Đăng Ký có ID là #form-register */
-    color: #fb44cd; /* Xanh lá accent */
+#form-register h3 { 
+    color: #fb44cd; 
     font-weight: 400;
     margin-bottom: 30px;
 }
@@ -22,8 +22,8 @@ body {
     
     /* Hiệu ứng Glow/Shadow */
     box-shadow: 
-        0 0 15px rgb(202, 40, 172), /* Ánh sáng xanh lá nhẹ (glow) */
-        0 10px 30px rgba(0, 0, 0, 0.9); /* Độ sâu tối */
+        0 0 15px rgb(202, 40, 172), 
+        0 10px 30px rgba(0, 0, 0, 0.9); 
     
     transition: all 0.3s ease;
 }
@@ -35,9 +35,9 @@ body {
 }
 /* Input Controls */
 #form-register .form-control {
-    background-color: #2a2a2a; /* Nền input tối */
+    background-color: #2a2a2a; 
     border: 1px solid #444;
-    color: #f0f0f0; /* Chữ sáng */
+    color: #f0f0f0; 
     padding: 12px;
     border-radius: 8px;
     transition: border-color 0.2s, box-shadow 0.2s;
@@ -49,7 +49,7 @@ body {
 
 #form-register .form-control:focus {
     background-color: #333;
-    border-color: #fb44cd; /* Xanh lá làm focus */
+    border-color: #fb44cd; 
     box-shadow: 0 0 5px rgb(202, 40, 172);
     color: #fff;
 }
@@ -62,7 +62,6 @@ body {
 }
 
 /* Customizing Bootstrap Button (Đăng Ký) */
-/* LƯU Ý: Nếu nút Đăng Ký cũng dùng lớp .btn-outline-primary */
 #form-register .btn-outline-primary {
     background-color: #fb44cd; 
     color: #1a1a1a; 

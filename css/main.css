@@ -1,4 +1,4 @@
-/* --- Thiết lập box-sizing chung (Rất quan trọng để tránh vỡ layout) --- */
+/* --- Thiết lập box-sizing chung (tránh vỡ layout) --- */
 * {
     box-sizing: border-box;
 }
@@ -19,15 +19,12 @@ body {
 ::-webkit-scrollbar {
     width: 10px;
 }
-
-/* Track – nền sau */
 ::-webkit-scrollbar-track {
     background: #111;
     border-radius: 10px;
     box-shadow: inset 0 0 5px #000;
 }
 
-/* Thanh kéo – hiệu ứng neon */
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(180deg, #ff00cc, #3333ff);
     border-radius: 10px;
@@ -35,13 +32,11 @@ body {
     transition: 0.3s ease;
 }
 
-/* Hover sáng mạnh hơn */
 ::-webkit-scrollbar-thumb:hover {
     background: linear-gradient(180deg, #ff33dd, #6666ff);
     box-shadow: 0 0 15px #ff33dd, 0 0 15px #6666ff;
 }
 
-/* --- Header (Quản Lí Quán BiDa) --- */
 .main-header {
     position: fixed;
     top: 0;
@@ -54,8 +49,6 @@ body {
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #fb44cd;
-
-
 }
 
 .logo{
@@ -98,7 +91,6 @@ body {
     color: #444;
 }
 
-/* --- Vùng Chính (Bao gồm Menu và Nội dung) --- */
 .main-container {
     margin-top: 80px;
     display: flex;
@@ -107,7 +99,6 @@ body {
     border-bottom: 3px solid #fb44cd;
 }
 
-/* --- Menu (Thanh điều hướng dọc) --- */
 .main-menu {
     width: 15%;
     background-color:  rgba(26, 26, 26, 0.95);
@@ -115,7 +106,6 @@ body {
     padding-right:10px;
     padding-left: 10px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
-    /* Giữ nguyên box-sizing để padding không ảnh hưởng đến width 15% */
 }
 
 .main-menu ul {
@@ -156,7 +146,6 @@ body {
 }
 /* --- Nội dung Chính --- */
 .main-content {
-    /* Đặt flex-grow: 1 và width auto để nó chiếm phần còn lại */
     width: auto; 
     flex-grow: 1;
     padding: 20px;
@@ -168,7 +157,6 @@ body {
 /* ====== RESPONSIVE ==== */
 /* ====================== */
 
-/* ====== TABLET ====== */
 @media (max-width: 992px) {
 
     .main-header {
@@ -197,7 +185,6 @@ body {
         margin-right: 10px;
     }
 
-    /* Menu */
     .main-menu {
         width: 25%;
     }
@@ -210,8 +197,6 @@ body {
 
 /* ====== MOBILE ====== */
 @media (max-width: 768px) {
-
-    /* Header */
     .main-header {
         width: 100%;
         height: 50px;
@@ -236,7 +221,6 @@ body {
 
     .main-container {
         flex-direction: column;
-        /* Giữ nguyên margin-top 70px */
         margin-top: 70px;
     }
 
@@ -246,11 +230,9 @@ body {
         display: flex;
         overflow-x: auto;
         overflow-y: hidden;
-        /* Điều chỉnh padding để không làm tăng chiều cao quá mức */
         padding: 10px 0; 
         box-shadow: none;
         white-space: nowrap;
-        /* Thêm đường viền dưới để ngăn cách rõ ràng với nội dung */
         border-bottom: 1px solid #fb44cd; 
     }
 
@@ -263,8 +245,7 @@ body {
         flex-direction: row;
         gap: 10px;
         width: max-content;
-        padding: 0 10px; /* Thêm padding ngang cho ul để các nút không dính sát mép */
-        margin: 0;
+        padding: 0 10px; 
         list-style: none;
         box-shadow: none;
     }
@@ -277,7 +258,7 @@ body {
     .main-menu li a {
         display: inline-block;
         font-size: 14px;
-        padding: 10px 14px; /* Điều chỉnh padding */
+        padding: 10px 14px; 
         margin: 0;
         border-left: none;
         border-radius: 6px;
@@ -291,13 +272,9 @@ body {
         border-left: none;
     }
 
-    /* Nội dung */
     .main-content {
-        /* Đảm bảo nội dung chiếm toàn bộ chiều rộng có sẵn */
         width: 100%; 
         padding: 15px;
-        /* Bỏ box-sizing ở đây vì đã đặt ở global (*) */
-    }
 }
 
 /* ====== MOBILE NHỎ ====== */
@@ -326,4 +303,5 @@ body {
         font-size: 12px;
         padding: 10px 14px;
     }
+}
 }

@@ -1,21 +1,17 @@
-/* ==========================================================================
-   1. CẤU HÌNH MÀU SẮC CHUNG (THEME)
-   Sửa màu ở đây sẽ tự động đổi màu toàn bộ trang
-   ========================================================================== */
+
 :root {
-    --bg-dark: #2a2d33;       /* Nền các ô/khung */
-    --bg-input: #1e1f23;      /* Nền ô nhập liệu */
-    --border: #3c3f47;        /* Viền mờ */
-    --text-main: #ffffff;     /* Chữ trắng */
-    --text-sub: #b0b3b8;      /* Chữ xám mờ */
+    --bg-dark: #2a2d33;       
+    --bg-input: #1e1f23;      
+    --border: #3c3f47;        
+    --text-main: #ffffff;     
+    --text-sub: #b0b3b8;      
     
-    --color-highlight: #00ffd0; /* Màu nhấn (Xanh lơ sáng) */
-    --color-success:#00ffd0d1;   /* Màu thành công (Xanh lá) */
-    --color-danger: #ff4242;    /* Màu báo động/xóa (Đỏ) */
+    --color-highlight: #00ffd0; 
+    --color-success:#00ffd0d1;   
+    --color-danger: #ff4242;    
 }
 
 /* ==========================================================================
-   2. BỐ CỤC CHÍNH (LAYOUT & TABS)
    ========================================================================== */
 .content-wrapper {
     flex-grow: 1;
@@ -25,10 +21,9 @@
 
 .main-area {
     flex-grow: 1;
-    max-width: calc(100% - 300px); /* Chừa chỗ cho hóa đơn bên phải */
+    max-width: calc(100% - 300px); 
 }
 
-/* --- TABS (Thanh chuyển đổi Danh sách bàn / Lịch hẹn) --- */
 .tabs {
     display: flex;
     border-bottom: 2px solid var(--border);
@@ -46,7 +41,7 @@
 }
 
 .tab.active {
-    color: 00c8ff; /* Màu xanh dương nhạt cho tab đang chọn */
+    color: 00c8ff; 
     border-bottom-color: #00c8ff;
     color: white;
 }
@@ -60,7 +55,7 @@
 
 
 /* ==========================================================================
-   3. KHU VỰC BÀN CHƠI (TABLE GRID)
+                                table
    ========================================================================== */
 .table-group-title {
     font-size: 35px;
@@ -72,12 +67,12 @@
 
 .table-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 bàn 1 hàng */
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     padding-bottom: 30px;
 }
 
-/* --- Ô BÀN CHƠI (ITEM) --- */
+/* --- Ô BÀN CHƠI --- */
 .table-box {
     background: var(--bg-dark);
     border: 2px solid var(--border);
@@ -141,7 +136,7 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    min-height: 200px; /* Chiều cao tương đương bàn */
+    min-height: 200px; 
 }
 .add-box:hover {
     border-color: #00c8ff;
@@ -151,7 +146,7 @@
 
 
 /* ==========================================================================
-   4. HỆ THỐNG NÚT BẤM (BUTTONS)
+   4. NÚT BẤM (BUTTONS)
    ========================================================================== */
 .btn {
     width: 100%;
@@ -199,7 +194,7 @@
 
 
 /* ==========================================================================
-   5. KHUNG HÓA ĐƠN (SIDEBAR PHẢI)
+   5. KHUNG HÓA ĐƠN 
    ========================================================================== */
 .bill-box {
     width: 280px;
@@ -276,8 +271,17 @@
     margin-bottom: 10px;
 }
 
-.booking-table-name { color: var(--color-highlight); font-weight: bold; }
-.booking-status     { background: var(--color-highlight); color: #222; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: bold;}
+.booking-table-name { 
+    color: var(--color-highlight); 
+    font-weight: bold; }
+.booking-status     { 
+    background: var(--color-highlight); 
+    color: #222; 
+    padding: 2px 6px; 
+    border-radius: 4px; 
+    font-size: 11px; 
+    font-weight: bold;
+}
 
 .booking-note {
     background: var(--border);
@@ -306,19 +310,24 @@
 
 .btn-del-booking {
     position: absolute; top: 5px; right: 5px;
-    color: #888; background: none; border: none; font-size: 20px; cursor: pointer;
+    color: #888; background: none;
+     border: none; 
+     font-size: 20px; 
+     cursor: pointer;
 }
-.btn-del-booking:hover { color: var(--color-danger); }
-
+.btn-del-booking:hover { 
+    color: var(--color-danger); 
+}
 
 /* ==========================================================================
-   7. MODAL (POPUP FORM)
+   7. MODAL 
    ========================================================================== */
 .modal {
     position: fixed; top: 0; left: 0;
     width: 100%; height: 100%;
     background-color: rgba(0,0,0,0.7);
-    display: flex; justify-content: center; align-items: center;
+    display: flex; justify-content: center; 
+    align-items: center;
     z-index: 1000;
 }
 
@@ -331,9 +340,9 @@
     color: white;
     position: relative;
     border: 2px solid var(--primary-color);
-    border-style: solid; /* Phải có kiểu thì viền mới hiển thị */
+    border-style: solid; 
     border-width: 1px;
-    border-color: var(--primary-color); /* Đặt màu viền */
+    border-color: var(--primary-color); 
 }
 
 .modal-content h3 {
@@ -343,12 +352,18 @@
 }
 
 .close-button {
-    position: absolute; top: 10px; right: 15px;
-    color: #aaa; font-size: 28px; cursor: pointer;
+    position: absolute; top: 10px; 
+    right: 15px;
+    color: #aaa; font-size: 28px; 
+    cursor: pointer;
 }
-.close-button:hover { color: white; }
+.close-button:hover { 
+    color: white; 
+}
 
-.form-group { margin-bottom: 15px; }
+.form-group { 
+    margin-bottom: 15px; 
+}
 .form-group label {
     display: block;
     margin-bottom: 5px;
@@ -366,11 +381,17 @@
     border-radius: 5px;
     background-color: var(--bg-input);
     color: white;
-    box-sizing: border-box; /* Quan trọng để không bị tràn lề */
+    box-sizing: border-box; 
 }
 
-#saveBookingBtn { margin-top: 20px; padding: 12px; font-size: 16px; }
-.hidden { display: none !important; }
+#saveBookingBtn {
+    margin-top: 20px; 
+    padding: 12px; 
+    font-size: 16px; 
+}
+.hidden { 
+    display: none !important; 
+}
 /* ===================== RESPONSIVE ===================== */
 
 /* MÀN HÌNH DƯỚI 1200PX  */

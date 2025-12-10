@@ -1,6 +1,4 @@
-/* ============================
-   TỔNG QUAN
-============================ */
+
 .tong-quan {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -191,13 +189,13 @@ td[contenteditable="true"] {
    MODAL STYLE (GIAO DIỆN NEON MỚI)
 ============================ */
 .modal-kho {
-    display: none; /* Mặc định ẩn */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.85); /* Nền tối mờ đậm */
+    background-color: rgba(0, 0, 0, 0.85); 
     z-index: 1000;
     backdrop-filter: blur(4px);
 }
@@ -210,7 +208,7 @@ td[contenteditable="true"] {
     
     width: 420px;
     background: #0f0f0f;
-    border: 1px solid #00ddae; /* Viền xanh Neon */
+    border: 1px solid #00ddae; 
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 0 25px rgba(0, 221, 174, 0.2);
@@ -326,7 +324,6 @@ td[contenteditable="true"] {
     overflow-x: auto; 
   }
 
- 
   table {
 
     width: 100%;
@@ -385,9 +382,7 @@ td[contenteditable="true"] {
     overflow-x: auto; 
   }
 
- 
   table {
-
     width: 100%;
     border-collapse: collapse;
     min-width: auto; 
