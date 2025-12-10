@@ -506,6 +506,9 @@ body {
     .nav-content { flex-direction: column; gap: 15px; }
     .hero-section { height: auto; padding: 60px 0; }
     .logo { flex-direction: column; gap: 5px; font-size: 1rem; }
+    .testimonials{
+        overflow-x: scroll;
+    }
     .section-header h2 { font-size: 1.8rem; }
     .card { padding: 30px 20px; }
     .card p { height: auto; }

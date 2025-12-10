@@ -316,3 +316,124 @@
     box-shadow: 0 0 15px var(--primary-color);
     transform: translateY(-2px);
 }
+/* ===================== RESPONSIVE ===================== */
+
+/* --- DƯỚI 1200px: thu nhỏ lưới menu --- */
+@media (max-width: 1200px) {
+    .menu-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+/* --- DƯỚI 900px: header gọn lại, giảm padding, giảm kích thước chữ --- */
+@media (max-width: 900px) {
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .header h1 {
+        font-size: 20px;
+    }
+
+    .tab-btn {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+
+    .card-img {
+        height: 130px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-price {
+        font-size: 14px;
+    }
+}
+
+/* --- DƯỚI 700px: grid 1 cột, nút nhỏ lại, modal gọn --- */
+@media (max-width: 700px) {
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tab-btn {
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+
+    .card {
+        border-radius: 10px;
+    }
+
+    .btn-order,
+    .btn-delete {
+        width: 70%;
+        font-size: 12px;
+    }
+
+    .modal-content {
+        width: 80%;
+        padding: 20px;
+    }
+
+    .modal-header {
+        font-size: 18px;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* --- DƯỚI 500px: tối ưu mobile nhỏ --- */
+@media (max-width: 500px) {
+
+    .header h1 {
+        font-size: 18px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .btn-add {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .tab-btn {
+        width: 100%;
+        margin: 5px 0;
+        font-size: 13px;
+    }
+
+    .menu-grid {
+        gap: 15px;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+
+    .btn-order,
+    .btn-delete {
+        width: 100%;
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    #toast {
+        min-width: 250px;
+        padding: 15px 20px;
+        font-size: 16px;
+    }
+}

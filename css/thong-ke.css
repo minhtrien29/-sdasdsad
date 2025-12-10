@@ -1,5 +1,4 @@
 .thongke-doanhthu{
-    margin-top: 30px;
     background-color: #1A1A1A;
     padding: 10px;
     border-radius: 8px;
@@ -352,3 +351,170 @@
     line-height: 1;
 }
 .close-icon:hover { color: #fff; }
+/* =========================================================
+    RESPONSIVE     
+   ========================================================= */
+
+/* --- DƯỚI 1200px: Thu nhỏ card doanh thu + bảng --- */
+@media (max-width: 1300px) {
+    .container {
+        width: 95%;
+    }
+    .thongke-doanhthu{
+        width: 100%;
+    }
+    .card-doanhthu {
+        gap: 3vh;
+    }
+
+    .card {
+        width: 90%;
+        height: 23vh;
+    }
+
+    .card-banchoi {
+        gap: 3vh;
+    }
+
+    .menu-card {
+        justify-content: center;
+    }
+}
+
+/* --- DƯỚI 900px: Chuyển layout sang dạng cột --- */
+@media (max-width: 1200px) {
+
+    .card-doanhthu {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        height: auto;
+    }
+
+    .money {
+        font-size: 32px;
+    }
+
+    /* Giờ chơi */
+    .card-banchoi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .table-selection-area,
+    #select-pool, #select-snooker, #select-libre,
+    .result-display-card {
+        width: 90%;
+    }
+
+    .menu-card {
+        flex-direction: column;
+    }
+
+    .monan, .monuoc {
+        width: 95%;
+        min-width: unset;
+    }
+}
+
+/* --- DƯỚI 700px: Tối ưu mobile lớn --- */
+@media (max-width: 700px) {
+
+    .card {
+        width: 70vw;
+    }
+
+    .money {
+        font-size: 28px;
+    }
+
+    .table-selection-area,
+    #select-pool, #select-snooker, #select-libre,
+    .result-display-card {
+        width: 90%;
+        font-size: 14px;
+    }
+    .table-selection-area {
+        width: 70vw;
+    }
+    .result-display-card {
+        width: 80%;
+
+    }
+
+    .monan, .monuoc {
+        width: 100%;
+        overflow-x: auto; 
+    }
+    .monan table, .monuoc table {
+        font-size: 12px;
+    }
+    .modal-box{
+        width: 80%;
+    }
+    .save-button {
+        width: 80%;
+        font-size: 14px;
+    }
+}
+
+/* --- DƯỚI 500px: Mobile nhỏ (iPhone SE, Android Mini) --- */
+@media (max-width: 500px) {
+
+    .thongke-doanhthu h2,
+    .thongke-giochoi-card h2,
+    .thongke-menu h2 {
+        font-size: 18px;
+    }
+
+    .card {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .money {
+        font-size: 24px;
+    }
+
+    .card h3 {
+        font-size: 16px;
+    }
+
+    .table-selection-area,
+    #select-pool, #select-snooker, #select-libre,
+    .result-display-card {
+        width: 90%;
+        padding: 12px;
+    }
+    .table-selection-area{
+        width: 80vw;
+    }
+    #select-pool, #select-snooker, #select-libre {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .monan table, .monuoc table {
+        font-size: 10px;
+        overflow-x: auto;
+    }
+    .monan td, th{
+        padding: 3px;
+    } 
+    .monuoc td, th{
+        padding: 3px;
+    } 
+    .save-button {
+        width: 90%;
+        font-size: 14px;
+    }
+
+    .add-row-button {
+        font-size: 13px;
+        padding: 8px;
+    }
+}

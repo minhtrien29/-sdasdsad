@@ -291,13 +291,123 @@ td[contenteditable="true"] {
 }
 
 /* ============================
-   RESPONSIVE
+   RESPONSIVE MOBILE
 ============================ */
 @media (max-width: 768px) {
-    .tong-quan { grid-template-columns: 1fr; gap: 20px; }
-    .top { display: block; }
-    .top-block, .kho-block { width: 100%; overflow-x: auto; margin-bottom: 20px; }
-    table { min-width: 500px; } /* Để bảng không bị co quá nhỏ trên mobile */
-    .kho-header { flex-direction: column; align-items: flex-start; gap: 10px; }
-    .modal-kho-content { width: 90%; }
+  /* TỔNG QUAN */
+  .tong-quan {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  /* TOP */
+  .top {
+    display: block; 
+    gap: 15px;
+  }
+
+  .top-block {
+    width: 90%;      
+    margin-bottom: 20px;
+    overflow-x: auto; 
+    min-width: auto;  
+  }
+
+  .top table {
+    display: block;   
+    width: 100%;
+    overflow-x: auto;
+    min-width: auto;  
+  }
+
+  /* KHO HÀNG */
+  .kho-block {
+    width: 100%;
+    overflow-x: auto; 
+  }
+
+ 
+  table {
+
+    width: 100%;
+    border-collapse: collapse;
+    min-width: auto; 
+  }
+
+  th, td {
+    
+    font-size: 12px; 
+    padding: 10px;
+  }
+
+  /* BUTTONS */
+  .kho-actions,
+  .btn-add,
+  .btn-delete,
+  .btn-update {
+    width: 100%;       
+    margin-bottom: 10px;
+  }
+}
+/* ============================
+   RESPONSIVE MOBILE
+============================ */
+@media (max-width: 768px) {
+  /* TỔNG QUAN */
+  .tong-quan {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  /* TOP */
+  .top {
+    display: block; 
+    gap: 15px;
+  }
+
+  .top-block {
+    width: 90%;      
+    margin-bottom: 20px;
+    overflow-x: auto; 
+    min-width: auto;  
+  }
+
+  .top table {
+    display: block;   
+    width: 100%;
+    overflow-x: auto;
+    min-width: auto;  
+  }
+
+  /* KHO HÀNG */
+  .kho-block {
+    width: 100%;
+    overflow-x: auto; 
+  }
+
+ 
+  table {
+
+    width: 100%;
+    border-collapse: collapse;
+    min-width: auto; 
+  }
+
+  th, td {
+    
+    font-size: 12px; 
+    padding: 10px;
+  }
+
+  /* BUTTONS */
+  .kho-actions,
+  .btn-add,
+  .btn-delete,
+  .btn-update {
+    width: 100%;       
+    margin-bottom: 10px;
+  }
+  .modal-kho-content{
+    width: 80%;
+  }
 }

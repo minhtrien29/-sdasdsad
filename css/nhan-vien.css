@@ -409,3 +409,192 @@ td.checked {
     background: #01a3a4;
     box-shadow: 0 0 15px rgba(0, 210, 211, 0.6);
 }
+/* =========================================================
+   RESPONSIVE – MOBILE / TABLET / LAPTOP
+   ========================================================= */
+
+/* ===== 1200px: giảm kích thước tổng quan cho laptop ===== */
+@media (max-width: 1200px) {
+    .capnhat-nhanvien{
+        width: 83%;
+    }
+    .left {
+        width: 25%;
+    }
+    input {
+        width: 70%;
+    }
+    .right {
+        width: 75%;
+    }
+
+    .right table {
+        min-width: 600px;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+}
+
+/* ===== 992px: Tablet ngang – chuyển layout 2 khối dọc ===== */
+@media (max-width: 992px) {
+
+    .capnhat-nhanvien {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left {
+        width: 100%;
+        border-right: none;
+        border-bottom: 3px solid #fff;
+        padding-bottom: 25px;
+    }
+
+    .right {
+        width: 100%;
+    }
+}
+
+/* ===== 768px: Tablet dọc – thu nhỏ bảng, nút, text ===== */
+@media (max-width: 768px) {
+
+    .title {
+        font-size: 20px;
+        padding: 12px;
+    }
+
+    .left h2 {
+        font-size: 18px;
+    }
+
+    .left h3 {
+        font-size: 15px;
+    }
+
+    input[type="text"] {
+        font-size: 15px;
+        padding: 10px 15px;
+    }
+
+    .nv-option {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .right table {
+        min-width: 550px;  
+    }
+
+    .right th,
+    .right td {
+        font-size: 14px;
+        padding: 10px 5px;
+    }
+
+    .right button {
+        width: 160px;
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
+/* ===== 600px: Mobile lớn ===== */
+@media (max-width: 600px) {
+
+    .left {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .left button {
+        width: 48%;
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .left li {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
+
+    .title {
+        font-size: 18px;
+    }
+
+    .right th,
+    .right td {
+        padding: 8px 4px;
+        font-size: 12px;
+    }
+
+    .right button {
+        width: 100%;
+        margin: 8px 0;
+    }
+
+    .danhsach td {
+        font-size: 13px;
+        padding: 8px;
+    }
+}
+
+/* ===== 480px: Mobile nhỏ (iPhone SE / Android mini) ===== */
+@media (max-width: 480px) {
+
+    .left h2 {
+        font-size: 16px;
+    }
+
+    .left h3 {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    input[type="text"] {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .nv-option {
+        padding: 8px 12px;
+    }
+
+    .left li {
+        font-size: 13px;
+    }
+
+    .right table {
+        min-width: 450px; /* để không vỡ cột */
+    }
+
+    .right th,
+    .right td {
+        font-size: 11px;
+        padding: 6px 3px;
+    }
+
+    .right button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .danhsach td {
+        font-size: 12px;
+    }
+}
+
+/* ===== 390px: Mobile siêu nhỏ ===== */
+@media (max-width: 390px) {
+    .title {
+        font-size: 16px;
+    }
+    .right button {
+        font-size: 13px;
+    }
+    .left button {
+        padding: 6px;
+        font-size: 11px;
+    }
+}
