@@ -451,15 +451,6 @@ td.checked {
 
 /* ===== 768px: Tablet dọc – thu nhỏ bảng, nút, text ===== */
 @media (max-width: 768px) {
-    .left {
-        width: 90%;
-    }
-    input {
-        width: 70%;
-    }
-    .right {
-        width: 90%;
-    }
     .title {
         font-size: 20px;
         padding: 12px;
@@ -504,15 +495,8 @@ td.checked {
 
 /* ===== 600px: Mobile lớn ===== */
 @media (max-width: 600px) {
-     .left {
-        width: 90%;
-    }
-    input {
-        width: 70%;
-    }
-    .right {
-        width: 90%;
-    }
+   
+    
     .left {
         width: 100%;
         padding: 15px;
@@ -552,15 +536,7 @@ td.checked {
 
 /* ===== 480px: Mobile nhỏ (iPhone SE / Android mini) ===== */
 @media (max-width: 480px) {
-     .left {
-        width: 90%;
-    }
-    input {
-        width: 70%;
-    }
-    .right {
-        width: 90%;
-    }
+
     .left h2 {
         font-size: 16px;
     }

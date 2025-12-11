@@ -396,6 +396,7 @@
 
 /* MÀN HÌNH DƯỚI 1200PX  */
 @media (max-width: 1200px) {
+    
     .table-container {
         grid-template-columns: repeat(2, 1fr);
     }
