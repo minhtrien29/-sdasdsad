@@ -363,7 +363,7 @@ td[contenteditable="true"] {
   }
 
   .top-block {
-    width: 90%;      
+    width: 100%;      
     margin-bottom: 20px;
     overflow-x: auto; 
     min-width: auto;  
